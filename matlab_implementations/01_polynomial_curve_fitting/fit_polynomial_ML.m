@@ -1,4 +1,5 @@
 function w = fit_polynomial_ML(X, T, M)
+    % (Maximum Likelihood)
     % X: input vector (N x 1)
     % T: target vector (N x 1)
     % M: polynomial degree
