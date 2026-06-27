@@ -7,3 +7,9 @@ function y = evaluate_polynomial(x, w)
         y = y + w(j+1) * (x .^ j);
     end
 end
+
+% Test
+% x = linspace(0,1,100)';
+% w = [0; 1];  % y = x
+% y = evaluate_polynomial(x, w);
+% plot(x, y);
