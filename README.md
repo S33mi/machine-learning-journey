@@ -45,6 +45,10 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 
 ## 📈 Results Highlights
 *(Will add soon screenshots of accuracy tables, confusion matrices, visualizations here; once i upload the implementation)*
+- **Polynomial Curve Fitting**
+
+  
+![Polynomial Curve Fitting Output](matlab_implementations/01_polynomial_curve_fitting/output-ML%20vs%20MAP-M9.png)
 
 ## How to Run
 ```
