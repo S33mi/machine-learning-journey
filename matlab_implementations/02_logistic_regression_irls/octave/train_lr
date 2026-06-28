@@ -1,0 +1,44 @@
+function w = train_lr(X, t)
+    % Reduced size + Regularization to avoid singular matrix
+    
+    max_samples = 1500;   % Keep it small for online 500 or 800
+    
+    if length(t) > max_samples
+        fprintf('Using %d samples (for speed & memory)\n', max_samples);
+        rng(42);  % reproducible
+        idx = randperm(length(t), max_samples);
+        X = X(idx, :);
+        t = t(idx);
+    end
+    
+    [N, D] = size(X);
+    X = [ones(N,1), X];   % bias term
+    
+    % Add small L2 regularization (ridge) to avoid singular matrix
+    lambda = 1e-4;
+    
+    w = zeros(D+1, 1);
+    max_iter = 25;
+    tol = 1e-4;
+    
+    for iter = 1:max_iter
+        y = sigmoid(X * w);
+        
+        R = diag(y .* (1 - y) + 1e-8);
+        
+        % Regularized update
+        Hessian = X' * R * X + lambda * eye(D+1);
+        grad = X' * (y - t);
+        
+        w_new = w - Hessian \ grad;   % Newton step with regularization
+        
+        delta = norm(w_new - w);
+        if delta < tol
+            fprintf('Converged in %d iterations.\n', iter);
+            break;
+        end
+        w = w_new;
+    end
+    
+    fprintf('Training finished with %d samples.\n', N);
+end
