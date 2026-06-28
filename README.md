@@ -29,7 +29,7 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 ## 🚀 Key Projects & Implementations
 
 - **Polynomial Curve Fitting** — Regularized & Bayesian approaches
-- **Logistic Regression with IRLS** (Iterative recursive method)
+- **Logistic Regression with IRLS** (Iterative Reweighted Least Squares method) Test Accuracy: 98.49%
 - **Gaussian Mixture Models** from scratch + EM
 - **PCA** for dimensionality reduction & visualization
 - **Neural Nets & CNNs** on MNIST
@@ -49,6 +49,10 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 
   
 ![Polynomial Curve Fitting Output](matlab_implementations/01_polynomial_curve_fitting/output-ML%20vs%20MAP-M9.png)
+
+
+- **Logistic Regression with IRLS**
+    - Training samples: 12665  -Test samples: 2115 -Using 1500 samples (for speed & memory) - Training finished with 1500 samples. -Test Accuracy: 98.49%
 
 ## How to Run
 ```
