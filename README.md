@@ -52,7 +52,9 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 
 
 - **Logistic Regression with IRLS**
-    - Training samples: 12665  -Test samples: 2115 -Using 1500 samples (for speed & memory) - Training finished with 1500 samples. -Test Accuracy: 98.49%
+    - Training samples: 12665  -Test samples: 2115 -Using 1500 samples (for speed & memory) - Training finished with 1500 samples. -Test Accuracy: 98.49% on data subset - 100.00% of Full dataset
+ 
+      ![Logistic Regression with IRLS Output](notebooks/output_lr_IRLS.png)
 
 ## How to Run
 ```
