@@ -30,6 +30,7 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 
 - **Polynomial Curve Fitting** — Regularized & Bayesian approaches
 - **Logistic Regression with IRLS** (Iterative Reweighted Least Squares method) Test Accuracy: 98.49%
+- **Multiclass Logistic Regression with SGD** (Stochastic Gradient Descent on MNIST dataset) Test Accuracy: 92%
 - **Gaussian Mixture Models** from scratch + EM
 - **PCA** for dimensionality reduction & visualization
 - **Neural Nets & CNNs** on MNIST
@@ -55,6 +56,12 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
     - Training samples: 12665  -Test samples: 2115 -Using 1500 samples (for speed & memory) - Training finished with 1500 samples. -Test Accuracy: 98.49% on data subset - 100.00% of Full dataset
  
       ![Logistic Regression with IRLS Output](notebooks/output_lr_IRLS.png)
+
+      
+- **Logistic Regression with SGD**
+    - Evaluating on Test Set: Test Accuracy: 88% on data subset Test Accuracy Full dataset: 92.12%
+ 
+      ![Logistic Regression with SGD Output](notebooks/output_mlr_sgd.png)
 
 ## How to Run
 ```
