@@ -20,7 +20,7 @@ train_labels = train_labels - 1;
 test_labels = test_labels - 1;
 
 % Use subset to avoid memory error
-max_train = 8000;   % You can try 10000 later
+max_train = 8000;   % You can try 10000 or higher later
 if size(train_x,1) > max_train
     fprintf('Using %d training samples for memory safety.\n', max_train);
     rng(42);
@@ -37,7 +37,7 @@ W = train_sgd(train_x, train_labels, ...
               'learning_rate', 0.2, ...
               'epochs', 20, ...
               'batch_size', 64);
-
+% increse the epochs size gradually to get higher accuracy
 % Test
 fprintf('\nTesting...\n');
 acc = test_sgd(W, test_x, test_labels);
