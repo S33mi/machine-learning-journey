@@ -34,6 +34,9 @@ W = train_sgd(train_x, train_labels, ...
               'batch_size', 128); 
 % tweak the learning_rate & epochs for higher accuracy
 
+% Train without batching
+%W = train_mlr_full_gd(train_x, train_labels, epochs=80, learning_rate=0.2);
+
 % ================== Test ==================
 fprintf('\nEvaluating on test set...\n');
 acc = test_sgd(W, test_x, test_labels);
