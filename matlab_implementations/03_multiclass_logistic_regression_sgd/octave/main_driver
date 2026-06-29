@@ -1,0 +1,46 @@
+% ======================================================
+% Driver Multiclass - Memory Friendly Version for octave
+% ======================================================
+
+clear; clc;
+
+fprintf('Loading MNIST...\n');
+load mnist_uint8.mat
+
+train_x = double(train_x);
+train_y = double(train_y);
+test_x  = double(test_x);
+test_y  = double(test_y);
+
+% Convert to labels
+[~, train_labels] = max(train_y, [], 2);
+train_labels = train_labels - 1;
+
+[~, test_labels] = max(test_y, [], 2);
+test_labels = test_labels - 1;
+
+% Use subset to avoid memory error
+max_train = 8000;   % You can try 10000 later
+if size(train_x,1) > max_train
+    fprintf('Using %d training samples for memory safety.\n', max_train);
+    rng(42);
+    idx = randperm(size(train_x,1), max_train);
+    train_x = train_x(idx, :);
+    train_labels = train_labels(idx);
+end
+
+fprintf('Training: %d samples | Test: %d samples\n', size(train_x,1), size(test_x,1));
+
+% Train
+fprintf('\nTraining Multiclass SGD...\n');
+W = train_sgd(train_x, train_labels, ...
+              'learning_rate', 0.2, ...
+              'epochs', 20, ...
+              'batch_size', 64);
+
+% Test
+fprintf('\nTesting...\n');
+acc = test_sgd(W, test_x, test_labels);
+
+save acc_multiclass acc
+fprintf('Done!\n');
