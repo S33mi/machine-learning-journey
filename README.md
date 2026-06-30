@@ -33,7 +33,7 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 - **Multiclass Logistic Regression with SGD** (Stochastic Gradient Descent on MNIST dataset) Test Accuracy: 92%
 - **Gaussian Mixture Models** from scratch + EM
 - **PCA** for dimensionality reduction & visualization
-- **Neural Nets & CNNs** on MNIST
+- **Neural Nets & CNNs** on MNIST (NN MLP with one hidden layer)
 - **Spectral Clustering** demo
 - **Autoencoders** for representation learning
 
@@ -62,6 +62,11 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
     - Evaluating on Test Set: Test Accuracy: 88% on data subset Test Accuracy Full dataset: 92.12%
  
       ![Logistic Regression with SGD Output](notebooks/output_mlr_sgd.png)
+
+- **Back Propagation Nural Networks with MLP**
+    - Test accuracy 80-90%
+
+       ![NN_backprop_MLP](notebooks/output_nn_mlp.png)
 
 ## How to Run
 ```
