@@ -1,4 +1,4 @@
-function net = bprop(net, activations, y_true, lr)
+function net = bprop_basic(net, activations, y_true, lr)
     delta = activations{5} - y_true';   % gradient of cross-entropy + softmax
     
     % FC layer
