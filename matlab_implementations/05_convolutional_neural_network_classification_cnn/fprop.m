@@ -17,5 +17,6 @@ function [activations, net] = fprop(net, X)
     [probs, net.fc] = fc_layer(flat, net.fc);
     activations{5} = probs;
     
-    activations{6} = probs;  % final output
+    % activations{6} = probs;  % final output
+
 end
