@@ -68,6 +68,18 @@ Implementations, notes, and projects from **CS-567 Machine Learning** and **CS-6
 
        ![NN_backprop_MLP](notebooks/output_nn_mlp.png)
 
+- **Convolution Nural Network**
+    - High speed and accuracy using PyTorch
+    - Low speed and accuracy while implimenting withoutout any extenal dependency. High complexity.
+      
+- **Principal Component Analysis (PCA)**
+  - **Dinemtionality Reduction**
+    -  Early PCs capture global stroke patterns and digit shapes.
+    -  umulative explained variance plot shows diminishing returns after ~50–100 components.
+    -  Later PCs capture finer details and variations (e.g., loops, slants).
+   
+       ![PCA_dim-red](notebooks/output_pca_fig_12_3.png)
+
 ## How to Run
 ```
 Use MATLAB
