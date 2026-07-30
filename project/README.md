@@ -1,9 +1,9 @@
 # ☠️ Dead Men Tell No Tales  
-### Poisonous Mushroom Classification
+### ☠️🍄 Poisonous Mushroom Classification
 
 > *“Dead men tell no tales… but mushrooms do — if you know how to listen.”*
 
-# 🍄 Mushroom Classification – Classical Machine Learning Benchmark
+
 Classic binary classification project that predicts whether a mushroom is **edible** or **poisonous** using the UCI Agaricus-Lepiota dataset.
 
 **Original version** of this project was implemented in **WEKA**.  
@@ -12,6 +12,8 @@ This repository contains a modern re-implementation in **Python + scikit-learn**
 Part of the **PUCIT Machine Learning Lectures** series (Nazar Khan).
 
 ---
+
+# 🍄 Mushroom Classification – Classical Machine Learning Benchmark
 
 ## Project Goal
 
